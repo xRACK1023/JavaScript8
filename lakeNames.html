@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>SD Lakes</title> 
+        <script>
+   
+        var lakes = ["Sylvan Lake", "Pactola Lake", "Sheridan Lake", "Horse Theif Lake", "Lewis and Clark Lake", "Big Stone Lake", "Waubay Lake"];
+
+        function displayLakes() {
+            var index;
+            var text = "";
+            for (index = 0; index < lakes.length; index++) {
+                text += lakes[index] + "<br/>";               
+            }
+            document.getElementById("showAllLakes").innerHTML ="All Lakes: " + "<br>"+ text;
+
+            var text = "";
+            for (index = 1; index < lakes.length; index+=2) {
+            text += lakes[index] + "<br/>";
+            }
+            document.getElementById("showEveryTwo").innerHTML ="Every even number lake: " + "<br>"+ text;
+        }
+        </script>
+    </head>
+	<body>
+        <h1>josephParrett</h1>
+
+        <button type="button" onclick="displayLakes()">Lakes</button></br>
+
+        <p id="showAllLakes"></p>
+        <p id="showEveryTwo"></p>
+
+	</body>
+</html>

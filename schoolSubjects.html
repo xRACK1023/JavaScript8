@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>School Subjects</title> 
+        <script>
+
+        var schoolSubjects = ["Math", "English", "Reading", "Gym", "Art", "Band", "Science", "History"];
+            
+        function displayAll(){
+            var index;
+            var text = " ";
+            for (index = 0; index < schoolSubjects.length; index++) {
+            text += schoolSubjects[index] + "<br/>";
+            }
+        document.getElementById("showClasses").innerHTML ="Subjects: " + "<br>" + text; 
+        }
+
+        function displayBackwards(){
+            var index;
+            var text = " ";
+            for (index = schoolSubjects.length-1; index >= 0; index--) {
+            text += schoolSubjects[index] + "<br/>";
+            }
+        document.getElementById("showClasses").innerHTML ="Subjects: " + "<br>" + text; 
+        }
+        </script>
+    </head>
+	<body>
+        <h1>josephParrett</h1>
+
+        <button type="button" onclick="displayAll()">Subjects</button>
+        <button type="button" onclick="displayBackwards()">Reverse</button></br>
+
+        <P id="showClasses"></P>
+
+	</body>	
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+
+<html>
+    <head>  
+        <title>Ice Cream Flavors</title> 
+        <script>
+
+        var iceCreamFlavors = ["Chocolate", "Vanilla", "Rocky Road", "Cookies and Cream", "Mint Chocolate Chip", "Butter Pecan"];
+           
+        function displayFlavors() {
+            var index;
+            var text = "";
+            for (index = 0; index < iceCreamFlavors.length; index++) {
+                text += iceCreamFlavors[index] + "<br/>";               
+            }
+            document.getElementById("showAllFlavors").innerHTML ="All Flavors: " + "<br>"+ text;
+
+            var text = "";
+            for (index = 0; index < iceCreamFlavors.length; index+=2) {
+            text += iceCreamFlavors[index] + "<br/>";
+            }
+            document.getElementById("showEveryOdd").innerHTML ="Every odd numbered flavor: " + "<br>"+ text;
+        }
+        </script>
+    </head>
+	<body>
+        <h1>josephParrett</h1>
+
+        <button type="button" onclick="displayFlavors()">Ice Cream</button></br>
+
+        <p id="showAllFlavors"></p>
+        <p id="showEveryOdd"></p>
+
+	</body>	
+</html>
